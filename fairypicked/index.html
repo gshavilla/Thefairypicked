@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Fire Picker</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="hero">
+
+    <img src="image/logo.png"
+         alt="The Fairy Picked Logo"
+         class="logo">
+
+    <h1>The Fairy Picked ✨</h1>
+
+    <p>🧚‍♀️ Thank you for letting us pick a little magic for you.
+           See you on our next fairy adventure. ✨</p>
+
+    <div class="hero-buttons">
+
+    <a href="#form-order" class="btn-order">
+        Isi Form Order ✏️
+    </a>
+
+    <a href="#syarat-ketentuan" class="btn-snk">
+        Baca Info & S&K
+    </a>
+
+</div>
+
+<section id="syarat-ketentuan" class="terms-section">
+
+<div class="terms-card">
+
+    <h2>🌷 TERMS & CONDITIONS 🌷</h2>
+
+    <ol>
+        <li>Kirimkan foto, nama barang, atau link produk yang ingin dititipkan.</li>
+        <li>Pembelian dilakukan sesuai ketersediaan stok di lokasi event.</li>
+        <li>Total pembayaran terdiri dari harga barang + fee jastip.</li>
+        <li>Fee jastip mengikuti informasi yang tertera pada postingan event terkait.</li>
+        <li>Barang yang sudah dibeli tidak dapat dibatalkan, ditukar, atau dikembalikan.</li>
+        <li>TheFairyPicked akan berusaha mendapatkan barang sesuai request, namun tidak menjamin ketersediaan stok karena stok dapat habis sewaktu-waktu.</li>
+        <li>Pembayaran dilakukan sesuai batas waktu yang diberikan agar pesanan dapat diproses.</li>
+        <li>Setelah barang tiba, pesanan akan dikirim melalui Shopee Checkout.</li>
+        <li>TheFairyPicked akan memastikan barang dikemas dengan baik sebelum pengiriman.</li>
+        <li>Dengan melakukan pemesanan, pelanggan dianggap telah membaca, memahami, dan menyetujui seluruh syarat & ketentuan yang berlaku.</li>
+    </ol>
+
+    <div class="thanks-box">
+        ✨ Thank you for trusting TheFairyPicked ✨
+    </div>
+
+</div>
+
+</section>
+<section class="payment-section">
+    <div class="payment-card">
+        <h2>💳 Payment Information</h2>
+        <p>
+            Silakan lakukan pembayaran melalui QRIS berikut
+            sebelum mengisi form pesanan.
+        </p>
+        <img
+            src="image/qris.jpeg"
+            alt="QRIS The Fairy Picked"
+            class="qris-img">
+
+        <div class="note-box">
+            ✨ Setelah melakukan pembayaran,
+            simpan bukti transfer untuk dikirimkan
+            saat checkout WhatsApp.
+        </div>
+    </div>
+</section>
+
+</header>
+<section class="form-section">
+    <h2>1. Data Pemesan</h2>
+    <input
+        type="text"
+        id="nama"
+        placeholder="Nama Lengkap">
+
+    <input
+        type="text"
+        id="wa"
+        placeholder="Nomor WhatsApp">
+
+    <input
+        type="text"
+        id="instagram"
+        placeholder="Username Instagram">
+
+    <textarea id="barang" placeholder="Barang yang ingin dititipkan (nama barang, warna/varian, qty, dll)"></textarea>
+    <div class="upload-container">
+        <label for="fotoBarang" class="upload-btn">
+            📎 Tambahkan Foto Barang
+        </label>
+
+        <input
+            type="file"
+            id="fotoBarang"
+            accept="image/*"
+            hidden>
+    </div>
+    <div id="previewContainer">
+        <img
+            id="previewImage"
+            alt="Preview Foto Barang">
+    </div>
+<section class="product-section">
+    <h2>📦 Pilih Kategori Barang</h2>
+    <div class="products">
+        <div class="card">
+            <h3>🧸 Small Item</h3>
+            <p>
+                Sticker, photocard, postcard,
+                keychain, pin, gantungan kunci,
+                dan barang kecil lainnya.
+            </p>
+            <p class="price">
+                💰 Fee Jastip Rp2.000
+            </p>
+            <div id="small-item-control">
+                <button
+                    class="select-btn"
+                    onclick="addItem('Small Item', 2000, 'small-item-control')">
+                    Pilih
+                </button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>🎀 Medium Item</h3>
+            <p>
+                Notebook, pouch, tumbler kecil,
+                standing acrylic, dan barang
+                berukuran sedang.
+            </p>
+            <p class="price">
+                💰 Fee Jastip Rp5.000
+            </p>
+            <div id="medium-item-control">
+                <button
+                    class="select-btn"
+                    onclick="addItem('Medium Item', 5000, 'medium-item-control')">
+                    Pilih
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🛍️ Large Item</h3>
+            <p>
+                Tas, hoodie, blanket,
+                album besar, dan barang
+                berukuran besar lainnya.
+            </p>
+            <p class="price">
+                💰 Fee Jastip Rp7.000
+            </p>
+            <div id="large-item-control">
+                <button
+                    class="select-btn"
+                    onclick="addItem('Large Item', 7000, 'large-item-control')">
+                    Pilih
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>⚠️ Fragile Item</h3>
+            <p>
+                Keramik, kaca, frame,
+                dan barang yang mudah
+                pecah atau rusak.
+            </p>
+            <p class="price">
+                💰 Fee Jastip Rp10.000
+            </p>
+            <div id="fragile-item-control">
+                <button
+                    class="select-btn"
+                    onclick="addItem('Fragile Item', 10000, 'fragile-item-control')">
+                    Pilih
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>✨ Custom Item</h3>
+            <p>
+                Untuk barang yang tidak termasuk
+                kategori di atas atau memerlukan
+                pengecekan terlebih dahulu.
+            </p>
+            <p class="price">
+                💰 Fee Jastip Rp8.000
+            </p>
+            <div id="custom-item-control">
+                <button
+                    class="select-btn"
+                    onclick="addItem('Custom Item', 8000, 'custom-item-control')">
+                    Pilih
+                </button>
+            </div>
+        </div>
+
+            <div class="card">
+            <h3>🚚 Pick-Up Item</h3>
+            <p>
+                Untuk pengambilan pesanan yang sudah
+                dibayar sebelumnya kepada tenant.
+                Kami hanya membantu mengambil dan
+                mengirimkan pesananmu.
+            </p>
+            <p class="price">
+                💰 Fee Jastip Rp4.000
+            </p>
+            <div id="pickup-item-control">
+                <button
+                    class="select-btn"
+                    onclick="addItem('Pick-Up Item', 4000, 'fragile-item-control')">
+                    Pilih
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cart-section">
+    <h2>🛒 Keranjang Belanja</h2>
+    <div id="cartItems">
+        <p>Belum ada item dipilih.</p>
+    </div>
+    <div class="cart-summary">
+        <p>
+            Total Fee Jastip:
+            <span id="subtotal">
+                Rp0
+            </span>
+        </p>
+
+        <h3>
+            Total Pembayaran:
+            <span id="total">
+                Rp0
+            </span>
+        </h3>
+
+    </div>
+   <button
+    class="checkout-btn"
+    onclick="checkoutWA()">
+    Checkout via WhatsApp
+</button>
+</section>
+<script src="java/java.js"></script>
+</body>
+</html>
